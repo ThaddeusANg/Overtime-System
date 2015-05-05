@@ -57,6 +57,18 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\availibility.css" />
+    <Content Include="images\menu.png" />
+    <Content Include="images\partSun-gold.svg" />
+    <Content Include="pages\sun-gold.svg" />
+    <Content Include="images\partCloudNight-white.svg" />
+    <Content Include="images\showersDay-white.svg" />
+    <Content Include="images\clearNight-white.svg" />
+    <Content Include="images\severeStormDay-white.svg" />
+    <Content Include="pages\availability.html" />
+    <Content Include="pages\available-jobs.html" />
+    <Content Include="pages\create-job.html" />
+    <Content Include="scripts\angular.min.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -65,11 +77,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\main.css" />
+    <Content Include="index.html" />
+    <Content Include="scripts\app.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

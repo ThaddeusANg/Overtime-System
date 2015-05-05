@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html ng-app="store">
+<head>
+    <title>FPD Overtime System</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+<body>
+    <div id="wrapper" ng-controller="TopMenuController as topMenu">
+        <header>
+            <div class="cell">
+                <div class="border-menu">&nbsp;</div><!--☰-->
+            </div>
+            <div class="cell">
+                <select id="top-menu" ng-model="topMenu.selected" ng-options="page.name for page in topMenu.pages"></select>
+            </div>
+            <div class="cell mainSubmit">
+                <label>Done</label>
+            </div>
+            <div class="clear"></div>
+        </header>
+        <div class="page-container" ng-include="topMenu.selected.url"></div>
+    </div>
+
+    <script src="scripts/angular.min.js"></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
+</body>
+</html>
