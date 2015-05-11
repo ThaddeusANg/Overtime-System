@@ -60,7 +60,7 @@
     <Content Include="css\availibility.css" />
     <Content Include="images\menu.png" />
     <Content Include="images\partSun-gold.svg" />
-    <Content Include="pages\sun-gold.svg" />
+    <Content Include="images\sun-gold.svg" />
     <Content Include="images\partCloudNight-white.svg" />
     <Content Include="images\showersDay-white.svg" />
     <Content Include="images\clearNight-white.svg" />
@@ -69,6 +69,10 @@
     <Content Include="pages\available-jobs.html" />
     <Content Include="pages\create-job.html" />
     <Content Include="scripts\angular.min.js" />
+    <Content Include="scripts\angular.min.js.map" />
+    <Content Include="scripts\main.js" />
+    <Content Include="scripts\availibility.js" />
+    <Content Include="scripts\jquery-2.1.4.min.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -7,8 +7,8 @@
 <body>
     <div id="wrapper" ng-controller="TopMenuController as topMenu">
         <header>
-            <div class="cell">
-                <div class="border-menu">&nbsp;</div><!--☰-->
+            <div class="cell" onclick="ActivateTopMenu()">
+                <div class="menu-button"><img id="btnTopMenu" src="images/menu.png" alt="menu button" /></div>
             </div>
             <div class="cell">
                 <select id="top-menu" ng-model="topMenu.selected" ng-options="page.name for page in topMenu.pages"></select>
@@ -20,7 +20,8 @@
         </header>
         <div class="page-container" ng-include="topMenu.selected.url"></div>
     </div>
-
+    <script src="scripts/jquery-2.1.4.min.js"></script>
+    <script src="scripts/main.js"></script>
     <script src="scripts/angular.min.js"></script>
     <script type="text/javascript" src="scripts/app.js"></script>
 </body>

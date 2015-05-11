@@ -4,12 +4,13 @@
 *   Header
 ***/
 .available-header{
-    height:30px;
-    width:93%;
+    height:40px;
+    width:94%;
     margin: 0px ;
-    padding: 20px 3%;
-    border: 3px inset #96928D;
-    background-color: #B5B2AE;
+    padding: 10px 3%;
+    border-top: 3px inset #96928D;
+    border-bottom: 3px inset #96928D;
+    background-color: #9A9691;
 }
 div.week-tabs{
     margin: 0px auto;
@@ -21,6 +22,7 @@ div.week-tabs > div{
     height: 30px;
     width:49.1%;
     background-color:#FFF;
+    padding-top: 5px;
 }
 div.week-tabs > .tab1{
     border-top: 2px solid #9B8F74;
@@ -66,30 +68,29 @@ ul.week-list{
     background-color:#FFF;
 }
 ul.week-list > li{
-    height: 37px;
-    border-bottom: 1px solid #B8A16F;
+    border-bottom: 2px solid #222;
     color:#B8A16F;
     text-align: center;
     text-transform:capitalize;
     font-size:1.6em;
     font-weight:bold;
-    padding-top:5px;
+    height:100%;
+}
+.day-title label{
+    padding: 10px 0px;
+    display: block;
+}
+.day-title .day-name{
+    display: block;
+    border-bottom: 2px solid #222;
 }
 .row.weather-item{
-    display:none;
-    border-top: 1px solid #222;
-    border-bottom: 1px solid #222;
-    margin-top: 5px;
+    margin-top: 0px;
     background-color:#AEC8BE;
     height:45px;
     clear:both;
     color:white;
     font-weight:normal;
-}
-ul.week-list > li:first-child{
-    height:100%;
-}
-ul.week-list > li:first-child .row.weather-item{
     display:block;
 }
 .weather-item .cell .weather-icon{
@@ -99,13 +100,8 @@ ul.week-list > li:first-child .row.weather-item{
 .weather-item .cell{
     float:left;
     width:33%;
-    padding-top: 4px;
-}
-.weather-item .cell:first-child{
-    padding-top: 0px;
-}
-.weather-item .cell:last-child{
-    padding-top: 8px;
+    height:45px;
+    padding:0px;
 }
 /***
 *   Buttons
