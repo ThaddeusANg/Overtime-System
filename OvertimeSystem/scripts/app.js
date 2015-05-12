@@ -24,6 +24,9 @@
 
     app.controller('WeekController', function(){
 
+        this.am = 'AM';
+        this.pm = 'PM';
+
         this.days = [
             { name: "Sunday", weather: { am: 'images/showersDay-white.svg', pm: 'images/partCloudNight-white.svg' }, temp: { am: 50, pm: 60 }, order: 4 },
             { name: "Monday", weather: { am: 'images/showersDay-white.svg', pm: 'images/partCloudNight-white.svg' }, temp: { am: 55, pm: 65 }, order: 5 },

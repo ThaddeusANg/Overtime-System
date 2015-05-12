@@ -112,19 +112,24 @@ label.day-name{
 .weather-item .cell:nth-child(n+3){
     width: 15%;
 }
-.cell p.temperature{
-    margin: 4px 0px 0px 0px;
+.cell.temperature, .cell.time{
+    padding: 9px 0px 0px 0px;
+    margin:0px;
+    height: 36px;
 }
-.cell p.time{
-    margin: 9px 0px 0px 0px;
+.temp-degree{
+    font-size: 85%;
+    margin-left: 3px;
 }
 /***
 *   Buttons
 ***/
 .onoffswitch {
     position: relative; 
-    width: 65px;
+    width: 58px;
     margin-top:7px;
+    border-radius:20px;
+    border: 2px solid #999999; 
     -webkit-user-select:none; 
     -moz-user-select:none; 
     -ms-user-select: none;
@@ -136,9 +141,7 @@ label.onoffswitch-label {
     display: block; 
     overflow: hidden; 
     cursor: pointer;
-    border: 2px solid #999999; 
     border-radius: 20px;
-    padding: 0px;
 }
 .onoffswitch-inner {
     display: block; 
@@ -181,7 +184,8 @@ label.onoffswitch-label {
 .onoffswitch-switch {
     display: block; 
     width: 18px; 
-    margin: 6px;
+    height:18px;
+    margin: 4px;
     background-color: #FF0000;
     border: 2px solid #999999; 
     border-radius: 20px;
