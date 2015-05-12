@@ -50,7 +50,7 @@ select#top-menu {
     -moz-appearance: none;
     -webkit-appearance : none;
     text-overflow : '';
-    background: url("../images/arrow.png") no-repeat right #fff;
+    background: url("../images/arrow-black.png") no-repeat right #fff;
 }
 select::-ms-expand {
     display					: 	none;                                                                                                                                                              

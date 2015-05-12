@@ -76,13 +76,16 @@ ul.week-list > li{
     font-weight:bold;
     height:100%;
 }
-.day-title label{
+label.day-title {
     padding: 10px 0px;
+    margin-right: 10px;
     display: block;
+    background:  #fff url("../images/arrow-gold.png") no-repeat right;
 }
-.day-title .day-name{
+label.day-name{
     display: block;
-    border-bottom: 2px solid #222;
+    color: #AEC8BE;
+    background:  #fff url("../images/arrow-turquoise.png") no-repeat right;
 }
 .row.weather-item{
     margin-top: 0px;
@@ -92,6 +95,9 @@ ul.week-list > li{
     color:white;
     font-weight:normal;
     display:block;
+}
+.row.weather-item.top-border{
+    border-top: 2px solid #222;
 }
 .weather-item .cell .weather-icon{
     height: 45px;
@@ -104,13 +110,13 @@ ul.week-list > li{
     padding:0px;
 }
 .weather-item .cell:nth-child(n+3){
-    width:15%;
+    width: 15%;
 }
-.cell label.temperature{
-    padding: 5px 0px;
+.cell p.temperature{
+    margin: 4px 0px 0px 0px;
 }
-.cell label.time{
-    padding: 9px 0px;
+.cell p.time{
+    margin: 9px 0px 0px 0px;
 }
 /***
 *   Buttons
@@ -159,14 +165,14 @@ label.onoffswitch-label {
     box-sizing: border-box;
 }
 .onoffswitch-inner:before {
-    content: "Yes";
+    content: "";
     padding-left: 7px;
     background-color: #FFF; 
     color: #999;
     text-align:left;
 }
 .onoffswitch-inner:after {
-    content: "No";
+    content: "";
     padding-right: 7px;
     background-color: #FFF; 
     color: #999;

@@ -11,6 +11,16 @@
         this.selected = this.pages[0];
     });
 
+    app.controller('WeekAvailableController', function () {
+       
+        this.tab = 1;
+
+        this.ReloadRoute = function (value) {
+            this.tab = value;
+            //$route.reload();
+        };
+
+    });    // End WeekAvailableController
 
     app.controller('WeekController', function(){
 
@@ -23,15 +33,11 @@
             { name: "Friday", weather: { am: 'images/showersDay-white.svg', pm: 'images/partCloudNight-white.svg' }, temp: { am: 58, pm: 68 }, order: 2 },
             { name: "Saturday", weather: { am: 'images/showersDay-white.svg', pm: 'images/partCloudNight-white.svg' }, temp: { am: 40, pm: 55 }, order: 3 }
         ];
-/*
-        this.ReloadRoute = function (value) {
-            this.tab = value;
-            $route.reload();
-        };
-*/
+
         this.ToggleActive = function(item) {
             item.labelClass = (item.labelClass === "day-name") ? "" : "day-name";
             item.showDay = (item.showDay === true) ? false : true;
         };
-    });
+
+    });     // End WeekController
 })();
