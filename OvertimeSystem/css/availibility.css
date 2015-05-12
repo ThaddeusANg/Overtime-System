@@ -1,12 +1,9 @@
-﻿body {}
-
-/***
+﻿/***
 *   Header
 ***/
 .available-header{
-    height:40px;
-    width:94%;
-    margin: 0px ;
+    height:60px;
+    margin: 0px;
     padding: 10px 3%;
     border-top: 3px inset #96928D;
     border-bottom: 3px inset #96928D;
@@ -19,7 +16,7 @@ div.week-tabs{
 }
 div.week-tabs > div{
     float: left;
-    height: 30px;
+    height: 53.5px;
     width:49.1%;
     background-color:#FFF;
     padding-top: 5px;
@@ -45,7 +42,6 @@ div.week-tabs > div.active a {
     color: #FFF;
     text-decoration: none;
     font-weight:bold;
-    font-size: 1.2em;
     text-align:center;
     display:block;
 }
@@ -53,13 +49,20 @@ div.week-tabs > div a {
     color: #B8A16F;
     text-decoration: none;
     font-weight:bold;
-    font-size: 1.2em;
+    font-size: 2em;
     text-align:center;
     display:block;
+    padding-top:5px;
 }
+
 /***
 *   Content
 ***/
+.content{
+    background:#000;
+    clear:both;
+    padding:10px 7px;
+}
 ul.week-list{
     list-style-type: none;
     width:100%;
@@ -72,15 +75,16 @@ ul.week-list > li{
     color:#B8A16F;
     text-align: center;
     text-transform:capitalize;
-    font-size:1.6em;
     font-weight:bold;
     height:100%;
 }
 label.day-title {
-    padding: 10px 0px;
+    padding: 15px 0px 0px 0px;
     margin-right: 10px;
     display: block;
     background:  #fff url("../images/arrow-gold.png") no-repeat right;
+    height:60px;
+    font-size:2.5em;
 }
 label.day-name{
     display: block;
@@ -90,44 +94,55 @@ label.day-name{
 .row.weather-item{
     margin-top: 0px;
     background-color:#AEC8BE;
-    height:45px;
+    height:60px;
     clear:both;
     color:white;
     font-weight:normal;
     display:block;
+    width:100%;
 }
 .row.weather-item.top-border{
     border-top: 2px solid #222;
 }
 .weather-item .cell .weather-icon{
-    height: 45px;
-    width: 45px
+    height: 60px;
+    width: 60px
 }
 .weather-item .cell{
     float:left;
-    width:33%;
-    height:45px;
+    height:60px;
     padding:0px;
+}
+.weather-item .cell:first-child{
+    width: 30%;
+}
+.weather-item .cell:nth-child(2){
+    width: 40%;
 }
 .weather-item .cell:nth-child(n+3){
     width: 15%;
+}
+.weather-item .cell:nth-child(3) {
+    text-align: center;
 }
 .cell.temperature, .cell.time{
     padding: 9px 0px 0px 0px;
     margin:0px;
     height: 36px;
+    font-size: 2.3em;
 }
 .temp-degree{
     font-size: 85%;
     margin-left: 3px;
+    font-size: 85%;
 }
 /***
 *   Buttons
 ***/
 .onoffswitch {
     position: relative; 
-    width: 58px;
-    margin-top:7px;
+    width: 54px;
+    margin-top:14px;
     border-radius:20px;
     border: 2px solid #999999; 
     -webkit-user-select:none; 
@@ -192,7 +207,7 @@ label.onoffswitch-label {
     position: absolute; 
     top: 0; 
     bottom: 0; 
-    right: 28px;
+    right: 24px;
     -moz-transition: all 0.3s ease-in 0s; 
     -webkit-transition: all 0.3s ease-in 0s;
     -o-transition: all 0.3s ease-in 0s; 

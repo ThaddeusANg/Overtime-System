@@ -3,7 +3,7 @@
 
     app.controller('TopMenuController', function (){
         this.pages = [
-            { name: 'Availibility', url: 'pages/availability.html' },
+            { name: 'Availability', url: 'pages/availability.html' },
             { name: 'Jobs', url: 'pages/available-jobs.html' },
             { name: 'Police Request Forms', url: 'pages/create-job.html' }
         ];
