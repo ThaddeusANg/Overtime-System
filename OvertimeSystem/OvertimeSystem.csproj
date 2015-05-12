@@ -58,7 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\availibility.css" />
-    <Content Include="images\menu.png" />
+    <Content Include="images\arrow.png" />
     <Content Include="images\partSun-gold.svg" />
     <Content Include="images\sun-gold.svg" />
     <Content Include="images\partCloudNight-white.svg" />
