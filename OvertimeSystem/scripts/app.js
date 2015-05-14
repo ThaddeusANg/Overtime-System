@@ -1,7 +1,7 @@
 ﻿(function(){
     var app = angular.module('store',[]);
 
-    app.controller('TopMenuController', function (){
+    app.controller('MainController', function (){
         this.pages = [
             { name: 'Availability', url: 'pages/availability.html' },
             { name: 'Jobs', url: 'pages/available-jobs.html' },
