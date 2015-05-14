@@ -5,20 +5,33 @@
     <link rel="stylesheet" type="text/css" href="css/main.css" />
 </head>
 <body>
-    <div id="wrapper" ng-controller="TopMenuController as topMenu">
-        <header>
-            <div class="cell">
-                &nbsp;
-            </div>
-            <div class="cell">
-                <select id="top-menu" ng-model="topMenu.selected" ng-options="page.name for page in topMenu.pages"></select>
-            </div>
-            <div class="cell mainSubmit">
-                <label>Done</label>
-            </div>
-            <div class="clear"></div>
-        </header>
-        <div class="page-container" ng-include="topMenu.selected.url"></div>
+    <div id="wrapper" ng-controller="MainController as mainCtrl">
+        <form>
+            <header>
+                <div class="cell">
+                    &nbsp;
+                </div>
+                <div class="cell">
+                    <select id="top-menu" ng-model="mainCtrl.selected" ng-options="page.name for page in mainCtrl.pages"></select>
+                </div>
+                <div class="cell mainSubmit">
+                    <label>Done</label>
+                </div>
+                <div class="clear"></div>
+            </header>
+            <div class="page-container" ng-include="mainCtrl.selected.url"></div>
+            <footer>
+                <div class="row">
+                    <div class="cell">
+                        <button type="submit" class="btn-submit">Submit</button>
+                    </div>
+                    <div class="cell">
+                        <button type="reset" class="btn-cancel">Clear</button>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </footer>
+        </form>
     </div>
     <script src="scripts/jquery-2.1.4.min.js"></script>
     <script src="scripts/main.js"></script>
