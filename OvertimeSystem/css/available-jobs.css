@@ -1,0 +1,159 @@
+﻿/***
+*   Header
+***/
+.job-header{
+    height:100px;
+    margin: 0px;
+    padding: 10px 3%;
+    border-top: 3px inset #96928D;
+    border-bottom: 3px inset #555;
+    background-color: #111;
+}
+div.week-tabs{
+    margin: 0px auto;
+    padding-top:5px;
+    width: 100%;
+}
+div.week-tabs > div{
+    float: left;
+    height: 80px;
+    width:49.1%;
+    background-color:#FFF;
+    padding-top: 10px;
+}
+div.week-tabs > .tab1{
+    border-top: 2px solid #9B8F74;
+    border-top-left-radius: 2px;
+    border-bottom: 2px solid #9B8F74;
+    border-bottom-left-radius: 2px;
+    border-left: 2px solid #9B8F74;
+}
+div.week-tabs > .tab2{
+    border-top: 2px solid #9B8F74;
+    border-top-right-radius: 2px;
+    border-bottom: 2px solid #9B8F74;
+    border-bottom-right-radius: 2px;
+    border-right: 2px solid #9B8F74;
+}
+div.week-tabs > div.active{
+    background-color:#B8A16F;
+}
+div.week-tabs > div.active a {
+    color: #FFF;
+    text-decoration: none;
+    font-weight:bold;
+    text-align:center;
+    display:block;
+}
+div.week-tabs > div a {
+    color: #B8A16F;
+    text-decoration: none;
+    font-weight:bold;
+    font-size: 3em;
+    text-align:center;
+    display:block;
+    padding-top:5px;
+}
+
+/***
+*   Content
+***/
+.content{
+    background:#555;
+    clear:both;
+    padding:10px 7px;
+}
+ul.week-list{
+    list-style-type: none;
+    width:100%;
+    margin:0px;
+    padding:0px;
+    background-color:#FFF;
+}
+ul.week-list > li{
+    border-bottom: 5px solid #555;
+    color:#B8A16F;
+    text-align: center;
+    text-transform:capitalize;
+    font-weight:bold;
+    height:100%;
+    width: 100%;
+}
+.job-day.row {
+    height          :   150px;
+    width           :   100%;
+    background      :   #000 url('../images/job-summary-bck.svg') no-repeat top left; 
+    background-size :   100% 100%; 
+}
+.job-cell:first-child, .job-cell:last-child{
+    float           :   left;
+    height          :   150px;
+    width           :   20%;
+    z-index         :   100;
+}
+.job-cell:nth-child(2){
+    float           :   left;
+    height          :   150px;
+    width           :   60%;
+    z-index         :   100;
+}
+img.weather-icon{
+    height          :   80px;
+}
+label.temperature{
+    display         :   block;
+}
+.bottom-right-block label.temperature{
+    color           :   #FFF;
+}
+.top-left-block, .bottom-right-block{
+    width           :   100%;
+    height          :   101px;
+}
+.bottom-left-block, .top-right-block{
+    width           :   100%;
+    height          :   39px;
+}
+label.job-title {
+    width           :   100%;
+    font-size       :   4.3em;
+}
+label.job-subtitle {
+    width: 100%;
+    font-size:2.5em;
+}
+.row.job-items{
+    margin-top: 0px;
+    background-color:#AEC8BE;
+    clear:both;
+    font-weight:normal;
+    display:block;
+    width:100%;
+    color       :   #000;
+}
+label.active-color {
+    color: #AEC8BE;
+}
+ul.job-list{
+    list-style-type: none;
+    width:100%;
+    margin:0px;
+    padding:0px;
+    background-color:#FFF;
+}
+
+/***
+*   Media Query
+***/
+@media (min-width: 620px) and (max-width: 780px) {
+    div.week-tabs > div a {
+        font-size: 2.5em;
+        padding-top: 10px;
+    }
+}
+@media only screen and (max-width: 619px) {
+    div.week-tabs > div a{
+        font-size          :    2em;
+        padding-top        :    15px;
+    }
+}

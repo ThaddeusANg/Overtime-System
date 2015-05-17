@@ -220,6 +220,9 @@ label.onoffswitch-label {
     background: #FFFFFF;
 }
 
+/***
+*   Media Query
+***/
 @media (min-width: 620px) and (max-width: 780px) {
    div.week-tabs > div a{
         font-size          :    2.5em;

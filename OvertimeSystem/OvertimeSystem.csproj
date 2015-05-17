@@ -57,10 +57,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\available-jobs.css" />
     <Content Include="css\availibility.css" />
     <Content Include="images\arrow-gold.png" />
     <Content Include="images\arrow-turquoise.png" />
     <Content Include="images\arrow-black.png" />
+    <Content Include="images\job-summary-bck.svg" />
     <Content Include="images\partSun-gold.svg" />
     <Content Include="images\sun-gold.svg" />
     <Content Include="images\partCloudNight-white.svg" />
@@ -72,6 +74,7 @@
     <Content Include="pages\create-job.html" />
     <Content Include="scripts\angular.min.js" />
     <Content Include="scripts\angular.min.js.map" />
+    <Content Include="scripts\available-jobs.js" />
     <Content Include="scripts\main.js" />
     <Content Include="scripts\availibility.js" />
     <Content Include="scripts\jquery-2.1.4.min.js" />

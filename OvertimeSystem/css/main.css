@@ -1,8 +1,9 @@
 ﻿body {}
 #wrapper{
-    margin          :   0px 10px;
+    margin          :   0px auto;
     padding         :   0px;
     min-width       :   440px;
+    max-width       :   1000px;
     border          :   5px outset #333;
     border-radius   :   5px;
 }
