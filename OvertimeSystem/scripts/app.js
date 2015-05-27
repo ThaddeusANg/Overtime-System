@@ -43,9 +43,9 @@
             { name: "Saturday", weather: { am: 'images/showersDay-white.svg', pm: 'images/partCloudNight-white.svg' }, temp: { am: 40, pm: 55 }, order: 3 }
         ];
 
-        this.ToggleActive = function(item) {
-            item.labelClass = (item.labelClass === "day-name") ? "" : "day-name";
+        this.ToggleActive = function (item) {
             item.showDay = (item.showDay === true) ? false : true;
+            item.labelClass = (item.labelClass === "day-name") ? "" : "day-name";
         };
 
     });     // End WeekController
@@ -69,8 +69,9 @@
         ];
 
         this.ToggleActive = function (item) {
-            item.labelClass = (item.labelClass === "day-name") ? "" : "day-name";
             item.showDay = (item.showDay === true) ? false : true;
+            item.labelClass = (item.labelClass === "day-name") ? "" : "day-name";
+            item.textColor = (item.showDay === true) ? { 'color' : '#AEC8BE'} : "";
         };
 
         this.ToggleActiveJob = function (item) {

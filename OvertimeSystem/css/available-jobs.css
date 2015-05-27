@@ -106,6 +106,7 @@ img.weather-icon{
 }
 label.temperature{
     display         :   block;
+    color           :   #B8A16F;
 }
 .bottom-right-block label.temperature{
     color           :   #FFF;
@@ -211,17 +212,22 @@ ul.job-list > li{
     font-size           :   3em;
 }
 .cell.status-header, .cell.status{
-    width               :   22%;
+    width               :   21%;
     float               :   left;
     text-align          :   left;
 }
 select.reason{
+    width               :   95%;
     border-radius       :   10px;
-    height              :   30px;
+    height              :   33px;
     padding             :   5px;
     font-size           :   1.0em;
     margin-top          :   10px;
     text-align          :   center;
+    -webkit-appearance  :   none;
+    -moz-appearance     :   none;
+    text-indent         :   1px;
+    text-overflow       :   '';
     background          : #ffffff; /* Old browsers */
     background          : -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6+ */
     background          : -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
@@ -231,18 +237,40 @@ select.reason{
     background          : linear-gradient(to bottom, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* W3C */
     filter              : progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
 }
+select::-ms-expand {
+    display: none;
+}
 /***
 *   Media Query
 ***/
 @media (min-width: 620px) and (max-width: 780px) {
     div.week-tabs > div a {
-        font-size: 2.5em;
-        padding-top: 10px;
+        font-size           :   2.5em;
+        padding-top         :   10px;
+    }
+    select.reason {
+        font-size           :   90%;
+    }
+    .row.job-details > .row:first-child {
+        font-size           :   1.3em;
+    }
+    .cell.description{
+        font-size           :   85%;
     }
 }
 @media only screen and (max-width: 619px) {
     div.week-tabs > div a{
-        font-size          :    2em;
-        padding-top        :    15px;
+        font-size           :   2em;
+        padding-top         :   15px;
+    }
+    select.reason {
+        font-size           :   75%;
+        content             :   'Reason';
+    }
+    .row.job-details > .row:first-child {
+        font-size           :   1.1em;
+    }
+    .cell.description{
+        font-size           :   80%;
     }
 }

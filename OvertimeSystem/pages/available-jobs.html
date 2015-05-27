@@ -14,7 +14,7 @@
     <ul class="week-list">
         <li ng-repeat="day in ctrlJob.days">
             <div class="job-container">
-                <div class="job-day row" ng-click="{active:ctrlJob.ToggleActive(day)}" ng-class="ctrlJob.active-color">
+                <div class="job-day row" ng-click="ctrlJob.ToggleActive(day)" ng-style="day.textColor">
                     <div class="job-cell">
                         <div class="top-left-block">
                             <img class="weather-icon" ng-src="{{day.weather.am}}" />
