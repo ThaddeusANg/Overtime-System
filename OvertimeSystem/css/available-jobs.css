@@ -1,4 +1,8 @@
-﻿/***
+﻿h5{
+    margin: 5px 0px
+}
+
+/***
 *   Header
 ***/
 .job-header{
@@ -138,10 +142,95 @@ ul.job-list{
     list-style-type: none;
     width:100%;
     margin:0px;
-    padding:0px;
-    background-color:#FFF;
+    padding             :   0px;
+    background-color    :   #FFF;
 }
-
+ul.job-list > li{
+    border-bottom       :   1px solid #888;
+}
+.row.job-summary{
+    background          :   #F6F7FA;
+    text-align          :   left;
+}
+.job-item{
+    width               :   96%;
+    height              :   32px;
+    font-size           :   1.3em;
+    padding             :   5px 0px 0px 2%;
+    color               :   #555;
+}
+.row.job-place{
+    width               :   98%;
+    height              :   32px;
+    font-size           :   1.6em;
+    padding-left        :   2%;
+}
+.row.job-address{
+    width               :   98%;
+    height              :   24px;
+    font-size           :   1.0em;
+    padding-left        :   2%;
+}
+.row.job-time{
+    width               :   98%;
+    height              :   28px;
+    font-size           :   1.3em;
+    padding-left        :   2%;
+}
+.row.job-details{
+    padding-top         :   10px;
+}
+.row.job-details > .row:first-child{
+    height              :   30px;
+    font-size           :   1.5em;
+    text-align          :   center;
+}
+.row.job-details > .row:last-child {
+    padding-bottom      :   10px;
+    height              :   60px;
+}
+.cell.description-header, .cell.description{
+    text-align          :   left;
+    padding-left        :   2%;
+    float               :   left;
+    width               :   55%;
+}
+.cell.description{
+    font-size           :   90%;
+}
+.cell.priority-header, .cell.priority{
+    float               :   left;
+    width               :   10%;
+    margin              :   0% 5%;
+}
+.cell.priority{
+    height              :   55px;
+    text-align          :   center;
+    border              :   3px solid #555;
+    border-radius       :   10px;
+    font-size           :   3em;
+}
+.cell.status-header, .cell.status{
+    width               :   22%;
+    float               :   left;
+    text-align          :   left;
+}
+select.reason{
+    border-radius       :   10px;
+    height              :   30px;
+    padding             :   5px;
+    font-size           :   1.0em;
+    margin-top          :   10px;
+    text-align          :   center;
+    background          : #ffffff; /* Old browsers */
+    background          : -moz-linear-gradient(top, #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6+ */
+    background          : -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
+    background          : -webkit-linear-gradient(top, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10+,Safari5.1+ */
+    background          : -o-linear-gradient(top, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Opera 11.10+ */
+    background          : -ms-linear-gradient(top, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* IE10+ */
+    background          : linear-gradient(to bottom, #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* W3C */
+    filter              : progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+}
 /***
 *   Media Query
 ***/

@@ -63,7 +63,9 @@
     <Content Include="images\arrow-turquoise.png" />
     <Content Include="images\arrow-black.png" />
     <Content Include="images\job-summary-bck.svg" />
+    <Content Include="images\minus.svg" />
     <Content Include="images\partSun-gold.svg" />
+    <Content Include="images\plus.svg" />
     <Content Include="images\sun-gold.svg" />
     <Content Include="images\partCloudNight-white.svg" />
     <Content Include="images\showersDay-white.svg" />

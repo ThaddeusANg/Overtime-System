@@ -1,0 +1,6 @@
+<svg width="20px" height="20px" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+  <!-- horizontal line -->
+  <line x1="0" y1="10" x2="20" y2="10" style="stroke: #888; stroke-width:2;"/>
+  <!-- vertical line -->
+  <line x1="10" y1="0" x2="10" y2="20" style="stroke: #888; stroke-width:2;"/>
+</svg>
