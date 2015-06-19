@@ -57,25 +57,31 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\job-details.css" />
     <Content Include="css\available-jobs.css" />
     <Content Include="css\availibility.css" />
+    <Content Include="Docs\Phone-Mockup-01.jpg" />
+    <Content Include="Docs\Phone-Mockup-03.jpg" />
+    <Content Include="Docs\Phone-Mockup-04.jpg" />
+    <Content Include="Docs\Phone-Mockup-05.jpg" />
+    <Content Include="Docs\Phone-Mockup-06.jpg" />
     <Content Include="images\arrow-gold.png" />
     <Content Include="images\arrow-turquoise.png" />
     <Content Include="images\arrow-black.png" />
     <Content Include="images\job-summary-bck.svg" />
-    <Content Include="images\minus.svg" />
     <Content Include="images\partSun-gold.svg" />
-    <Content Include="images\plus.svg" />
     <Content Include="images\sun-gold.svg" />
     <Content Include="images\partCloudNight-white.svg" />
     <Content Include="images\showersDay-white.svg" />
     <Content Include="images\clearNight-white.svg" />
     <Content Include="images\severeStormDay-white.svg" />
     <Content Include="pages\availability.html" />
+    <Content Include="pages\job-details.html" />
     <Content Include="pages\available-jobs.html" />
     <Content Include="pages\create-job.html" />
     <Content Include="scripts\angular.min.js" />
     <Content Include="scripts\angular.min.js.map" />
+    <Content Include="scripts\job-details.js" />
     <Content Include="scripts\available-jobs.js" />
     <Content Include="scripts\main.js" />
     <Content Include="scripts\availibility.js" />

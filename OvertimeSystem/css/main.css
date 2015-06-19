@@ -65,7 +65,7 @@ select::-ms-expand {
 *   Header
 ***/
 footer{
-    height          :   150px;
+    height          :   225px;
     width           :   100%;
     background-color:   #9A9691;
 }
@@ -77,7 +77,7 @@ footer .row .cell{
 footer .row .cell button{
     width           :   80%;
     margin          :   10px auto;
-    height          :   130px;
+    height          :   205px;
     border-radius   :   5px;
     font-size       :   4em;
 }

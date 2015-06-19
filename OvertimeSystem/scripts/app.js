@@ -4,7 +4,7 @@
     /***
     *   Main Page
     ***/
-    app.controller('MainController', function (){
+    app.controller('MainController', function () {
         this.pages = [
             { name: 'Availability', url: 'pages/availability.html' },
             { name: 'Jobs', url: 'pages/available-jobs.html' },
@@ -12,6 +12,7 @@
         ];
 
         this.selected = this.pages[0];
+
     });
 
     /***
@@ -23,7 +24,6 @@
 
         this.ReloadRoute = function (value) {
             this.tab = value;
-            //$route.reload();
         };
 
     });    // End WeekAvailableController
@@ -57,26 +57,22 @@
 
         this.am = 'AM';
         this.pm = 'PM';
+        this.job = {};
 
         this.days = [
-            { name: "Sunday", weather: { am: 'images/partSun-gold.svg', pm: 'images/partCloudNight-white.svg' }, temp: { am: 50, pm: 60 }, totalJobs: 35, order: 4, jobs: [{ type: 'Patrol', place: 'Fairfield Main Public Library', address: '1080 Old Post Road', time: '3:00pm - 5:30pm', description: 'There is an event going on at the library', priority: 3, accept: true, reason: { id: 0, name: "---     Reason     ---" } }, { type: 'Traffic', place: 'Stop and Shop', address: '1160 Kings Hwy Cutoff', time: '8:00am - 12:00pm', description: 'Dropping fiber optic lines into the ground outside Stop & Shop', priority: '2', accept: false, reason: { id: 2, name: "Past sixteen hour limit" } }, { type: 'Crowd Control', place: 'Seagrape Cafe', address: '1144 Reef Rd', time: '9:00pm - 12:00am', description: 'Fairfield University students are having a graduation party', priority: 1, accept: true, reason: { id: 0, name: "---     Reason     ---" } }] },
-            { name: "Monday", weather: { am: 'images/sun-Gold.svg', pm: 'images/clearNight-white.svg' }, temp: { am: 55, pm: 65 }, totalJobs: 25, order: 5, jobs: [{ type: 'Patrol', place: 'Fairfield Main Public Library', address: '1080 Old Post Road', time: '3:00pm - 5:30pm', description: 'There is an event going on at the library', priority: 3, accept: true, reason: { id: 2, name: "Past sixteen hour limit" } }, { type: 'Traffic', place: 'Stop and Shop', address: '1160 Kings Hwy Cutoff', time: '8:00am - 12:00pm', description: 'Dropping fiber optic lines into the ground outside Stop & Shop', priority: '2', accept: false, reason: { id: 1, name: "Conflicts with schedule" } }, { type: 'Crowd Control', place: 'Seagrape Cafe', address: '1144 Reef Rd', time: '9:00pm - 12:00am', description: 'Fairfield University students are having a graduation party', priority: 1, accept: true, reason: { id: 2, name: "Past sixteen hour limit" } } ] },
-            { name: "Tuesday", weather: { am: 'images/partSun-gold.svg', pm: 'images/partCloudNight-white.svg' }, temp: { am: 45, pm: 63 }, totalJobs: 39, order: 6, jobs: [{ type: 'Patrol', place: 'Fairfield Main Public Library', address: '1080 Old Post Road', time: '3:00pm - 5:30pm', description: 'There is an event going on at the library', priority: 3, accept: true, reason: { id: 0, name: "---     Reason     ---" } }, { type: 'Traffic', place: 'Stop and Shop', address: '1160 Kings Hwy Cutoff', time: '8:00am - 12:00pm', description: 'Dropping fiber optic lines into the ground outside Stop & Shop', priority: '2', accept: true, reason: { id: 2, name: "Past sixteen hour limit" } }, { type: 'Crowd Control', place: 'Seagrape Cafe', address: '1144 Reef Rd', time: '9:00pm - 12:00am', description: 'Fairfield University students are having a graduation party', priority: 1, accept: true, reason: { id: 1, name: "Conflicts with schedule" } }] },
-            { name: "Wednesday", weather: { am: 'images/sun-Gold.svg', pm: 'images/clearNight-white.svg' }, temp: { am: 60, pm: 72 }, totalJobs: 15, order: 7, jobs: [{ type: 'Patrol', place: 'Fairfield Main Public Library', address: '1080 Old Post Road', time: '3:00pm - 5:30pm', description: 'There is an event going on at the library', priority: 3, accept: true, reason: { id: 0, name: "---     Reason     ---" } }, { type: 'Traffic', place: 'Stop and Shop', address: '1160 Kings Hwy Cutoff', time: '8:00am - 12:00pm', description: 'Dropping fiber optic lines into the ground outside Stop & Shop', priority: '2', accept: false, reason: { id: 1, name: "Conflicts with schedule" } }, { type: 'Crowd Control', place: 'Seagrape Cafe', address: '1144 Reef Rd', time: '9:00pm - 12:00am', description: 'Fairfield University students are having a graduation party', priority: 1, accept: true, reason: { id: 2, name: "Past sixteen hour limit" } } ] },
-            { name: "Thursday", weather: { am: 'images/partSun-gold.svg', pm: 'images/partCloudNight-white.svg' }, temp: { am: 62, pm: 75 }, totalJobs: 22, order: 1, jobs: [{ type: 'Patrol', place: 'Fairfield Main Public Library', address: '1080 Old Post Road', time: '3:00pm - 5:30pm', description: 'There is an event going on at the library', priority: 3, accept: true, reason: { id: 0, name: "---     Reason     ---" } }, { type: 'Traffic', place: 'Stop and Shop', address: '1160 Kings Hwy Cutoff', time: '8:00am - 12:00pm', description: 'Dropping fiber optic lines into the ground outside Stop & Shop', priority: '2', accept: true, reason: { id: 0, name: "---     Reason     ---" } }, { type: 'Crowd Control', place: 'Seagrape Cafe', address: '1144 Reef Rd', time: '9:00pm - 12:00am', description: 'Fairfield University students are having a graduation party', priority: 1, accept: true, reason: { id: 2, name: "Past sixteen hour limit" } } ] },
-            { name: "Friday", weather: { am: 'images/sun-Gold.svg', pm: 'images/clearNight-white.svg' }, temp: { am: 58, pm: 68 }, totalJobs: 31, order: 2, jobs: [{ type: 'Patrol', place: 'Fairfield Main Public Library', address: '1080 Old Post Road', time: '3:00pm - 5:30pm', description: 'There is an event going on at the library', priority: 3, accept: true, reason: { id: 0, name: "---     Reason     ---" } }, { type: 'Traffic', place: 'Stop and Shop', address: '1160 Kings Hwy Cutoff', time: '8:00am - 12:00pm', description: 'Dropping fiber optic lines into the ground outside Stop & Shop', priority: '2', accept: false, reason: { id: 2, name: "Past sixteen hour limit" } }, { type: 'Crowd Control', place: 'Seagrape Cafe', address: '1144 Reef Rd', time: '9:00pm - 12:00am', description: 'Fairfield University students are having a graduation party', priority: 1, accept: true, reason: { id: 1, name: "Conflicts with schedule" } } ] },
-            { name: "Saturday", weather: { am: 'images/partSun-gold.svg', pm: 'images/partCloudNight-white.svg' }, temp: { am: 40, pm: 55 }, totalJobs: 18, order: 3, jobs: [{ type: 'Patrol', place: 'Fairfield Main Public Library', address: '1080 Old Post Road', time: '3:00pm - 5:30pm', description: 'There is an event going on at the library', priority: 3, accept: true, reason: { id: 2, name: "Past sixteen hour limit" } }, { type: 'Traffic', place: 'Stop and Shop', address: '1160 Kings Hwy Cutoff', time: '8:00am - 12:00pm', description: 'Dropping fiber optic lines into the ground outside Stop & Shop', priority: '2', accept: true, reason: { id: 0, name: "---     Reason     ---" } }, { type: 'Crowd Control', place: 'Seagrape Cafe', address: '1144 Reef Rd', time: '9:00pm - 12:00am', description: 'Fairfield University students are having a graduation party', priority: 1, accept: true, reason: { id: 0, name: "---     Reason     ---" } } ] }
+            { name: "Sunday", weather: { am: 'images/partSun-gold.svg', pm: 'images/partCloudNight-white.svg' }, temp: { am: 50, pm: 60 }, totalJobs: 35, order: 4, jobs: [{ id: 1, type: 'Patrol', place: 'Fairfield Main Public Library', address: '1080 Old Post Road', time: '3:00pm - 5:30pm', description: 'There is an event going on at the library', priority: 3, accept: true, reason: { id: 0, name: "---     Reason     ---" } }, { id: 2, type: 'Traffic', place: 'Stop and Shop', address: '1160 Kings Hwy Cutoff', time: '8:00am - 12:00pm', description: 'Dropping fiber optic lines into the ground outside Stop & Shop', priority: '2', accept: false, reason: { id: 2, name: "Past sixteen hour limit" } }, { id: 3, type: 'Crowd Control', place: 'Seagrape Cafe', address: '1144 Reef Rd', time: '9:00pm - 12:00am', description: 'Fairfield University students are having a graduation party', priority: 1, accept: true, reason: { id: 0, name: "---     Reason     ---" } }] },
+            { name: "Monday", weather: { am: 'images/sun-Gold.svg', pm: 'images/clearNight-white.svg' }, temp: { am: 55, pm: 65 }, totalJobs: 25, order: 5, jobs: [{ id: 4, type: 'Patrol', place: 'Fairfield Main Public Library', address: '1080 Old Post Road', time: '3:00pm - 5:30pm', description: 'There is an event going on at the library', priority: 3, accept: true, reason: { id: 2, name: "Past sixteen hour limit" } }, { id: 5, type: 'Traffic', place: 'Stop and Shop', address: '1160 Kings Hwy Cutoff', time: '8:00am - 12:00pm', description: 'Dropping fiber optic lines into the ground outside Stop & Shop', priority: '2', accept: false, reason: { id: 1, name: "Conflicts with schedule" } }, { id: 6, type: 'Crowd Control', place: 'Seagrape Cafe', address: '1144 Reef Rd', time: '9:00pm - 12:00am', description: 'Fairfield University students are having a graduation party', priority: 1, accept: true, reason: { id: 2, name: "Past sixteen hour limit" } }] },
+            { name: "Tuesday", weather: { am: 'images/partSun-gold.svg', pm: 'images/partCloudNight-white.svg' }, temp: { am: 45, pm: 63 }, totalJobs: 39, order: 6, jobs: [{ id: 7, type: 'Patrol', place: 'Fairfield Main Public Library', address: '1080 Old Post Road', time: '3:00pm - 5:30pm', description: 'There is an event going on at the library', priority: 3, accept: true, reason: { id: 0, name: "---     Reason     ---" } }, { id: 8, type: 'Traffic', place: 'Stop and Shop', address: '1160 Kings Hwy Cutoff', time: '8:00am - 12:00pm', description: 'Dropping fiber optic lines into the ground outside Stop & Shop', priority: '2', accept: true, reason: { id: 2, name: "Past sixteen hour limit" } }, { id: 9, type: 'Crowd Control', place: 'Seagrape Cafe', address: '1144 Reef Rd', time: '9:00pm - 12:00am', description: 'Fairfield University students are having a graduation party', priority: 1, accept: true, reason: { id: 1, name: "Conflicts with schedule" } }] },
+            { name: "Wednesday", weather: { am: 'images/sun-Gold.svg', pm: 'images/clearNight-white.svg' }, temp: { am: 60, pm: 72 }, totalJobs: 15, order: 7, jobs: [{ id: 10, type: 'Patrol', place: 'Fairfield Main Public Library', address: '1080 Old Post Road', time: '3:00pm - 5:30pm', description: 'There is an event going on at the library', priority: 3, accept: true, reason: { id: 0, name: "---     Reason     ---" } }, { id: 11, type: 'Traffic', place: 'Stop and Shop', address: '1160 Kings Hwy Cutoff', time: '8:00am - 12:00pm', description: 'Dropping fiber optic lines into the ground outside Stop & Shop', priority: '2', accept: false, reason: { id: 1, name: "Conflicts with schedule" } }, { id: 12, type: 'Crowd Control', place: 'Seagrape Cafe', address: '1144 Reef Rd', time: '9:00pm - 12:00am', description: 'Fairfield University students are having a graduation party', priority: 1, accept: true, reason: { id: 2, name: "Past sixteen hour limit" } }] },
+            { name: "Thursday", weather: { am: 'images/partSun-gold.svg', pm: 'images/partCloudNight-white.svg' }, temp: { am: 62, pm: 75 }, totalJobs: 22, order: 1, jobs: [{ id: 13, type: 'Patrol', place: 'Fairfield Main Public Library', address: '1080 Old Post Road', time: '3:00pm - 5:30pm', description: 'There is an event going on at the library', priority: 3, accept: true, reason: { id: 0, name: "---     Reason     ---" } }, { id: 14, type: 'Traffic', place: 'Stop and Shop', address: '1160 Kings Hwy Cutoff', time: '8:00am - 12:00pm', description: 'Dropping fiber optic lines into the ground outside Stop & Shop', priority: '2', accept: true, reason: { id: 0, name: "---     Reason     ---" } }, { id: 15, type: 'Crowd Control', place: 'Seagrape Cafe', address: '1144 Reef Rd', time: '9:00pm - 12:00am', description: 'Fairfield University students are having a graduation party', priority: 1, accept: true, reason: { id: 2, name: "Past sixteen hour limit" } }] },
+            { name: "Friday", weather: { am: 'images/sun-Gold.svg', pm: 'images/clearNight-white.svg' }, temp: { am: 58, pm: 68 }, totalJobs: 31, order: 2, jobs: [{ id: 16, type: 'Patrol', place: 'Fairfield Main Public Library', address: '1080 Old Post Road', time: '3:00pm - 5:30pm', description: 'There is an event going on at the library', priority: 3, accept: true, reason: { id: 0, name: "---     Reason     ---" } }, { id: 17, type: 'Traffic', place: 'Stop and Shop', address: '1160 Kings Hwy Cutoff', time: '8:00am - 12:00pm', description: 'Dropping fiber optic lines into the ground outside Stop & Shop', priority: '2', accept: false, reason: { id: 2, name: "Past sixteen hour limit" } }, { id: 18, type: 'Crowd Control', place: 'Seagrape Cafe', address: '1144 Reef Rd', time: '9:00pm - 12:00am', description: 'Fairfield University students are having a graduation party', priority: 1, accept: true, reason: { id: 1, name: "Conflicts with schedule" } }] },
+            { name: "Saturday", weather: { am: 'images/partSun-gold.svg', pm: 'images/partCloudNight-white.svg' }, temp: { am: 40, pm: 55 }, totalJobs: 18, order: 3, jobs: [{ id: 19, type: 'Patrol', place: 'Fairfield Main Public Library', address: '1080 Old Post Road', time: '3:00pm - 5:30pm', description: 'There is an event going on at the library', priority: 3, accept: true, reason: { id: 2, name: "Past sixteen hour limit" } }, { id: 20, type: 'Traffic', place: 'Stop and Shop', address: '1160 Kings Hwy Cutoff', time: '8:00am - 12:00pm', description: 'Dropping fiber optic lines into the ground outside Stop & Shop', priority: '2', accept: true, reason: { id: 0, name: "---     Reason     ---" } }, { id: 21, type: 'Crowd Control', place: 'Seagrape Cafe', address: '1144 Reef Rd', time: '9:00pm - 12:00am', description: 'Fairfield University students are having a graduation party', priority: 1, accept: true, reason: { id: 0, name: "---     Reason     ---" } }] }
         ];
 
         this.ToggleActive = function (item) {
             item.showDay = (item.showDay === true) ? false : true;
             item.labelClass = (item.labelClass === "day-name") ? "" : "day-name";
             item.textColor = (item.showDay === true) ? { 'color' : '#AEC8BE'} : "";
-        };
-
-        this.ToggleActiveJob = function (item) {
-            item.showDetails = (item.showDetails === false) ? true : false;
-            item.background = (item.showDetails === true) ? { 'background': 'url("../images/minus.svg") no-repeat right center' } : { 'background': 'url("../images/plus.svg") no-repeat right center' };
         };
 
         this.Reasons = [
@@ -96,4 +92,24 @@
         };
 
     });    // End AvailableJobsController
+
+    app.factory('MainNavigation', function () {
+
+        return {
+            CurrentIndex: function (index) {
+                var defaultIndex = 0;
+
+                if (typeof (index) === 'undefined') {
+                    value = defaultIndex;
+                }
+                else {
+                    value = index;
+                }
+
+                console.log('should be changed to', value);
+                return value;
+            }
+        }
+
+    });     // End mainNavigation factory
 })();

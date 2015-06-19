@@ -40,8 +40,8 @@
                 </div>
                 <div class="row job-items" ng-show="day.showDay">
                     <ul class="job-list">
-                        <li ng-repeat="job in day.jobs">
-                            <div class="row job-summary" ng-click="ctrlJob.ToggleActiveJob(job)" ng-init="ctrlJob.ToggleActiveJob(job)">
+                        <li ng-repeat="job in day.jobs" ng-click="ctrlJob.GetActiveJob(job)">
+                            <div class="row job-summary">
                                 <div class="row job-item" ng-style="job.background">
                                     {{job.type}}
                                 </div>
@@ -55,27 +55,9 @@
                                     <i>{{job.time}}</i>
                                 </div>
                             </div>
-                            <div class="row job-details" ng-show="job.showDetails">
-                                <div class="row">
-                                    <div class="cell description-header"><h5>Description</h5></div>
-                                    <div class="cell priority-header"><h5>Priority</h5></div>
-                                    <div class="cell status-header">&nbsp;</div>
-                                </div>
-                                <div class="row">
-                                    <div class="cell description">{{job.description}}</div>
-                                    <div class="cell priority">{{job.priority}}</div>
-                                    <div class="cell status"> 
-                                        <label>
-                                            <input type="checkbox" ng-model="job.accept">
-                                            Accept
-                                        </label><br />
-                                        <select ng-hide="job.accept" class="reason" ng-init='reasonType=job.reason' ng-model="reasonType" ng-options="reason.name for reason in ctrlJob.Reasons track by reason.id"></select>
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="clear"></div>
                         </li>
                     </ul>
-                    <div class="clear"></div>
                 </div>
             </div>
         </li>

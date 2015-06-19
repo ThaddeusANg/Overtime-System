@@ -1,0 +1,28 @@
+﻿<link rel="stylesheet" type="text/css" href="../css/job-details.css" />
+<script src="../scripts/job-details.js"></script>
+<section class="content" ng-controller="JobController as ctrlJob">
+    <ul class="job-list" ng-show="job.showDetails">
+        <li ng-show="job in day.jobs">
+            <div class="row job-details">
+                <div class="row">
+                    <div class="cell description-header"><h2>Description</h2></div>
+                    <div class="cell priority-header"><h2>Priority</h2></div>
+                    <div class="cell status-header">&nbsp;</div>
+                </div>
+                <div class="row">
+                    <div class="cell description">{{job.description}}</div>
+                    <div class="cell priority">{{job.priority}}</div>
+                    <div class="cell status">
+                        <input type="checkbox" ng-model="job.accept">
+                        <label>
+                            Accept
+                        </label><br />
+                        <select ng-hide="job.accept" class="reason" ng-init='reasonType=job.reason' ng-model="reasonType" ng-options="reason.name for reason in ctrlJob.Reasons track by reason.id"></select>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </li>
+    </ul>
+</section>
+
