@@ -8,7 +8,8 @@
         this.pages = [
             { name: 'Availability', url: 'pages/availability.html' },
             { name: 'Jobs', url: 'pages/available-jobs.html' },
-            { name: 'Police Request Forms', url: 'pages/create-job.html' }
+            { name: 'Police Request Forms', url: 'pages/create-job.html' },
+            { name: 'Submit Request ', url: 'pages/job-request.html' }
         ];
 
         this.selected = this.pages[0];
@@ -69,6 +70,7 @@
             { name: "Saturday", weather: { am: 'images/partSun-gold.svg', pm: 'images/partCloudNight-white.svg' }, temp: { am: 40, pm: 55 }, totalJobs: 18, order: 3, jobs: [{ id: 19, type: 'Patrol', place: 'Fairfield Main Public Library', address: '1080 Old Post Road', time: '3:00pm - 5:30pm', description: 'There is an event going on at the library', priority: 3, accept: true, reason: { id: 2, name: "Past sixteen hour limit" } }, { id: 20, type: 'Traffic', place: 'Stop and Shop', address: '1160 Kings Hwy Cutoff', time: '8:00am - 12:00pm', description: 'Dropping fiber optic lines into the ground outside Stop & Shop', priority: '2', accept: true, reason: { id: 0, name: "---     Reason     ---" } }, { id: 21, type: 'Crowd Control', place: 'Seagrape Cafe', address: '1144 Reef Rd', time: '9:00pm - 12:00am', description: 'Fairfield University students are having a graduation party', priority: 1, accept: true, reason: { id: 0, name: "---     Reason     ---" } }] }
         ];
 
+
         this.ToggleActive = function (item) {
             item.showDay = (item.showDay === true) ? false : true;
             item.labelClass = (item.labelClass === "day-name") ? "" : "day-name";
@@ -93,6 +95,88 @@
 
     });    // End AvailableJobsController
 
+    /***
+    *   Job Request
+    ***/
+    app.controller('JobRequestController', function () {
+
+        this.am = 'AM';
+        this.pm = 'PM';
+
+        this.days = [
+            { name: "Sunday", weather: { am: 'images/showersDay-white.svg', pm: 'images/partCloudNight-white.svg' }, temp: { am: 50, pm: 60 }, order: 4 , head: "Company Name",
+                client: "Service Requested By",
+                minPayNotice: "Notified of Minimum Payment",
+                payNotice: "Payment Received",
+                instruction: "For Instructions See",
+                billTo: "Bill To (if different than above)",
+                address: "Address"},
+            { name: "Monday", weather: { am: 'images/severeStormDay-white.svg', pm: 'images/clearNight-white.svg' }, temp: { am: 55, pm: 65 }, order: 5 , head: "Company Name",
+                client: "Service Requested By",
+                minPayNotice: "Notified of Minimum Payment",
+                payNotice: "Payment Received",
+                instruction: "For Instructions See",
+                billTo: "Bill To (if different than above)",
+                address: "Address"},
+            { name: "Tuesday", weather: { am: 'images/showersDay-white.svg', pm: 'images/partCloudNight-white.svg' }, temp: { am: 45, pm: 63 }, order: 6 , head: "Company Name",
+                client: "Service Requested By",
+                minPayNotice: "Notified of Minimum Payment",
+                payNotice: "Payment Received",
+                instruction: "For Instructions See",
+                billTo: "Bill To (if different than above)",
+                address: "Address"},
+            { name: "Wednesday", weather: { am: 'images/severeStormDay-white.svg', pm: 'images/clearNight-white.svg' }, temp: { am: 60, pm: 72 }, order: 7 , head: "Company Name",
+                client: "Service Requested By",
+                minPayNotice: "Notified of Minimum Payment",
+                payNotice: "Payment Received",
+                instruction: "For Instructions See",
+                billTo: "Bill To (if different than above)",
+                address: "Address"},
+            { name: "Thursday", weather: { am: 'images/showersDay-white.svg', pm: 'images/partCloudNight-white.svg' }, temp: { am: 62, pm: 75 }, order: 1 , head: "Company Name",
+                client: "Service Requested By",
+                minPayNotice: "Notified of Minimum Payment",
+                payNotice: "Payment Received",
+                instruction: "For Instructions See",
+                billTo: "Bill To (if different than above)",
+                address: "Address"},
+            { name: "Friday", weather: { am: 'images/severeStormDay-white.svg', pm: 'images/clearNight-white.svg' }, temp: { am: 58, pm: 68 }, order: 2 , head: "Company Name",
+                client: "Service Requested By",
+                minPayNotice: "Notified of Minimum Payment",
+                payNotice: "Payment Received",
+                instruction: "For Instructions See",
+                billTo: "Bill To (if different than above)",
+                address: "Address"},
+            { name: "Saturday", weather: { am: 'images/showersDay-white.svg', pm: 'images/partCloudNight-white.svg' }, temp: { am: 40, pm: 55 }, order: 3 , head: "Company Name",
+                client: "Service Requested By",
+                minPayNotice: "Notified of Minimum Payment",
+                payNotice: "Payment Received",
+                instruction: "For Instructions See",
+                billTo: "Bill To (if different than above)",
+                address: "Address"}
+        ];
+
+
+        //please disregard, still trying to find how to call this array instead of coding copies into every iteration of days
+        this.req =[
+        { id: "reqName", label: "Company Name", input: "text" },
+        { id: "client", label: "Service Requested By", input: "text"},
+        /*{ id: "minPayNotice", label: "Notified of Minimum Payment", input: "checkbox"},
+        { id: "payNoticeSwitch", label: "Payment Received", input: "checkbox"},
+        { id: "instruction", label: "For Instructions See", input: "text"},
+        { id: "billInfo", label: "Billing Information", input: "na"},
+        { id: "billTo", label: "Bill To (if different than above)", input: "text"},
+        { id: "address", label: "Address", input: "text"}
+        */
+        ];
+
+
+        this.ToggleActive = function (item) {
+            item.showDay = (item.showDay === true) ? false : true;
+            item.labelClass = (item.labelClass === "day-name") ? "" : "day-name";
+        };
+
+    });
+  // End Job_Request
     app.factory('MainNavigation', function () {
 
         return {

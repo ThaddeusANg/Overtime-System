@@ -1,0 +1,139 @@
+﻿<link rel="stylesheet" type="text/css" href="css/job-request.css" />
+<script src="scripts/job-request.js"></script>
+<section class="available-header" ng-controller="WeekAvailableController as availableWeek">
+    <div class="week-tabs">
+        <div class="tab1" ng-class="{active : availableWeek.tab === 1}">
+            <a href="#" ng-click="availableWeek.ReloadRoute(1)">This Week</a>
+        </div>
+        <div class="tab2" ng-class="{active : availableWeek.tab === 2}">
+            <a href="#" ng-click="availableWeek.ReloadRoute(2)">Next Week</a>
+        </div>
+    </div>
+</section>
+<section class="content" ng-controller="JobRequestController as request">
+
+    <ul class="week-list">
+        <li ng-repeat="day in request.days">
+            <div class="day-container">
+                <label class="day-title" ng-class="day.labelClass" ng-click="{active:request.ToggleActive(day)}">{{day.name}}</label>
+                <div class="row weather-item top-border" ng-show="day.showDay">
+                    <div>
+                        <input type="text" name="{{day.name}}reqName" ng-model="day.head" required ng-trim="false"><br />
+                        <hr />
+                        <input type="text" name="{{day.name}}reqBy" ng-model="day.client" required ng-trim="false"><br />
+                        <hr />
+                        <p class="alignLeft temp-degree">{{day.minPayNotice}}</p>
+                        <p class="onoffswitch">
+                                <input type="checkbox" name="{{day.name}}reqMinPay" class="onoffswitch-checkbox" id="{{day.name}}reqMinPay" checked>
+                                <label class="onoffswitch-label" for="{{day.name}}reqMinPay">
+                                    <span class="onoffswitch-inner"></span>
+                                    <span class="onoffswitch-switch"></span>
+                                </label>                       
+                         </p>
+                        <div style="clear: both;"></div>
+                        <hr />
+                        <p class="alignLeft ">
+                            {{day.payNotice}}
+                        </p>
+                        <p class="onoffswitch">
+                                <input type="checkbox" name="{{day.name}}reqPay" class="onoffswitch-checkbox" id="{{day.name}}reqPay" checked>
+                                <label class="onoffswitch-label" for="{{day.name}}reqPay">
+                                    <span class="onoffswitch-inner"></span>
+                                    <span class="onoffswitch-switch"></span>
+                                </label>
+                        </p>
+                        <div style="clear: both;"></div>
+                        <hr />
+                        <input type="text" name="{{day.name}}reqInstruct" ng-model="day.instruction" required ng-trim="false">
+                        </div>
+                    <br />
+                        <div class="box">
+                            Billing Information
+                        </div>
+                    <br />
+                    <div>
+                        <input type="text" name="{{day.name}}reqBy" ng-model="day.billTo" required ng-trim="false"><br />
+                        <hr />
+                        <input type="text" name="{{day.name}}reqBy" ng-model="day.address" required ng-trim="false"><br /> 
+                </div>
+        <div class="clear"></div>
+        </div>
+        </li>
+    </ul>
+</section>
+
+
+<!--<link rel="stylesheet" type="text/css" href="css/availibility.css" />
+<script src="scripts/availibility.js"></script>
+<section class="available-header" ng-controller="WeekAvailableController as availableWeek">
+    <div class="week-tabs">
+        <div class="tab1" ng-class="{active : availableWeek.tab === 1}">
+            <a href="#" ng-click="availableWeek.ReloadRoute(1)">This Week</a>
+        </div>
+        <div class="tab2" ng-class="{active : availableWeek.tab === 2}">
+            <a href="#" ng-click="availableWeek.ReloadRoute(2)">Next Week</a>
+        </div>
+    </div>
+</section>
+<section class="content" ng-controller="JobRequestController as request">
+       <ul class="week-list">
+            <li ng-repeat="day in request.days">
+                    <div class="day-container">
+                        <label class="day-title" ng-class="day.labelClass" ng-click="{active:jobrequest.ToggleActive(day)}">{{day.name}}</label>
+                        <div class="row weather-item top-border" ng-show="day.showDay">
+                            <div class="cell">
+                                <input type="text" name="{{day.name}}reqName" ng-model="day.head" required ng-trim="false">
+                            </div>
+                        </div>
+                        <div class="row weather-item" ng-show="day.showDay">
+                            <div class="cell">
+                                {{request.client}}<input type="text" name="{{day.name}}reqBy" ng-model="{{request.client}}" required ng-trim="false">
+                            </div>
+                        </div>
+                        <div class="row weather-item" ng-show="day.showDay">
+                            <div class="cell">
+                                {{request.minPayNotice}}
+                                <input type="checkbox" name="{{day.name}}reqMinPay" class="onoffswitch-checkbox" id="{{day.name}}reqMinPay" checked>
+                                <label class="onoffswitch-label" for="{{day.name}}reqMinPay">
+                                    <span class="onoffswitch-inner"></span>
+                                    <span class="onoffswitch-switch"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row weather-item" ng-show="day.showDay">
+                            <div class="cell">
+                                {{request.payNotice}}
+                                <input type="checkbox" name="{{day.name}}OnOffSwitch" class="onoffswitch-checkbox" id="{{day.name}}OnOffSwitch-pm" checked>
+                                <input type="checkbox" name="{{day.name}}reqPay" class="onoffswitch-checkbox" id="{{day.name}}reqPay" checked>
+                                <label class="onoffswitch-label" for="{{day.name}}reqPay">
+                                    <span class="onoffswitch-inner"></span>
+                                    <span class="onoffswitch-switch"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="row weather-item" ng-show="day.showDay">
+                            <div class="cell">
+                                <input type="text" name="{{day.name}}reqInstruct" ng-model="{{request.instruction}}" required ng-trim="false">
+                            </div>
+                        </div>
+                        <div class="row weather-item top-border" ng-show="day.showDay">
+                            <div class="cell">
+                                BILLING INFORMATION
+                            </div>
+                        </div>
+                        <div class="row weather-item" ng-show="day.showDay">
+                            <div class="cell">
+                                <input type="text" name="{{day.name}}reqBy" ng-model="{{request.billTo}}" required ng-trim="false">
+                            </div>
+                        </div>
+                        <div class="row weather-item" ng-show="day.showDay">
+                            <div class="cell">
+                                <input type="text" name="{{day.name}}reqBy" ng-model="{{request.address}}" required ng-trim="false">
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+            </li>
+        </ul>
+</section>
+    -->
