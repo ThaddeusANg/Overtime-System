@@ -18,11 +18,11 @@
                 <label class="day-title" ng-class="day.labelClass" ng-click="{active:request.ToggleActive(day)}">{{day.name}}</label>
                 <div class="row weather-item top-border" ng-show="day.showDay">
                     <div>
-                        <input type="text" name="{{day.name}}reqName" ng-model="day.head" required ng-trim="false"><br />
+                        <input type="text" name="{{day.name}}reqName" ng-model="request.header.reqName" required ng-trim="false"><br />
                         <hr />
-                        <input type="text" name="{{day.name}}reqBy" ng-model="day.client" required ng-trim="false"><br />
+                        <input type="text" name="{{day.name}}reqBy" ng-model="request.header.client" required ng-trim="false"><br />
                         <hr />
-                        <p class="alignLeft temp-degree">{{day.minPayNotice}}</p>
+                        <p class="alignLeft temp-degree">{{request.header.minPayNotice}}</p>
                         <p class="onoffswitch">
                                 <input type="checkbox" name="{{day.name}}reqMinPay" class="onoffswitch-checkbox" id="{{day.name}}reqMinPay" checked>
                                 <label class="onoffswitch-label" for="{{day.name}}reqMinPay">
@@ -44,17 +44,17 @@
                         </p>
                         <div style="clear: both;"></div>
                         <hr />
-                        <input type="text" name="{{day.name}}reqInstruct" ng-model="day.instruction" required ng-trim="false">
+                        <input type="text" name="{{day.name}}reqInstruct" ng-model="request.header.instruction" required ng-trim="false">
                         </div>
                     <br />
                         <div class="box">
-                            Billing Information
+                            {{request.header.billInfo}}
                         </div>
                     <br />
                     <div>
-                        <input type="text" name="{{day.name}}reqBy" ng-model="day.billTo" required ng-trim="false"><br />
+                        <input type="text" name="{{day.name}}reqBy" ng-model="request.header.billTo" required ng-trim="false"><br />
                         <hr />
-                        <input type="text" name="{{day.name}}reqBy" ng-model="day.address" required ng-trim="false"><br /> 
+                        <input type="text" name="{{day.name}}reqBy" ng-model="request.header.address" required ng-trim="false"><br /> 
                 </div>
         <div class="clear"></div>
         </div>

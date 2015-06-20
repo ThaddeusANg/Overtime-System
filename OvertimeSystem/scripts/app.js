@@ -104,71 +104,24 @@
         this.pm = 'PM';
 
         this.days = [
-            { name: "Sunday", weather: { am: 'images/showersDay-white.svg', pm: 'images/partCloudNight-white.svg' }, temp: { am: 50, pm: 60 }, order: 4 , head: "Company Name",
-                client: "Service Requested By",
-                minPayNotice: "Notified of Minimum Payment",
-                payNotice: "Payment Received",
-                instruction: "For Instructions See",
-                billTo: "Bill To (if different than above)",
-                address: "Address"},
-            { name: "Monday", weather: { am: 'images/severeStormDay-white.svg', pm: 'images/clearNight-white.svg' }, temp: { am: 55, pm: 65 }, order: 5 , head: "Company Name",
-                client: "Service Requested By",
-                minPayNotice: "Notified of Minimum Payment",
-                payNotice: "Payment Received",
-                instruction: "For Instructions See",
-                billTo: "Bill To (if different than above)",
-                address: "Address"},
-            { name: "Tuesday", weather: { am: 'images/showersDay-white.svg', pm: 'images/partCloudNight-white.svg' }, temp: { am: 45, pm: 63 }, order: 6 , head: "Company Name",
-                client: "Service Requested By",
-                minPayNotice: "Notified of Minimum Payment",
-                payNotice: "Payment Received",
-                instruction: "For Instructions See",
-                billTo: "Bill To (if different than above)",
-                address: "Address"},
-            { name: "Wednesday", weather: { am: 'images/severeStormDay-white.svg', pm: 'images/clearNight-white.svg' }, temp: { am: 60, pm: 72 }, order: 7 , head: "Company Name",
-                client: "Service Requested By",
-                minPayNotice: "Notified of Minimum Payment",
-                payNotice: "Payment Received",
-                instruction: "For Instructions See",
-                billTo: "Bill To (if different than above)",
-                address: "Address"},
-            { name: "Thursday", weather: { am: 'images/showersDay-white.svg', pm: 'images/partCloudNight-white.svg' }, temp: { am: 62, pm: 75 }, order: 1 , head: "Company Name",
-                client: "Service Requested By",
-                minPayNotice: "Notified of Minimum Payment",
-                payNotice: "Payment Received",
-                instruction: "For Instructions See",
-                billTo: "Bill To (if different than above)",
-                address: "Address"},
-            { name: "Friday", weather: { am: 'images/severeStormDay-white.svg', pm: 'images/clearNight-white.svg' }, temp: { am: 58, pm: 68 }, order: 2 , head: "Company Name",
-                client: "Service Requested By",
-                minPayNotice: "Notified of Minimum Payment",
-                payNotice: "Payment Received",
-                instruction: "For Instructions See",
-                billTo: "Bill To (if different than above)",
-                address: "Address"},
-            { name: "Saturday", weather: { am: 'images/showersDay-white.svg', pm: 'images/partCloudNight-white.svg' }, temp: { am: 40, pm: 55 }, order: 3 , head: "Company Name",
-                client: "Service Requested By",
-                minPayNotice: "Notified of Minimum Payment",
-                payNotice: "Payment Received",
-                instruction: "For Instructions See",
-                billTo: "Bill To (if different than above)",
-                address: "Address"}
+            { name: "Sunday", weather: { am: 'images/showersDay-white.svg', pm: 'images/partCloudNight-white.svg' }, temp: { am: 50, pm: 60 }, order: 4 },
+            { name: "Monday", weather: { am: 'images/severeStormDay-white.svg', pm: 'images/clearNight-white.svg' }, temp: { am: 55, pm: 65 }, order: 5},
+            { name: "Tuesday", weather: { am: 'images/showersDay-white.svg', pm: 'images/partCloudNight-white.svg' }, temp: { am: 45, pm: 63 }, order: 6 },
+            { name: "Wednesday", weather: { am: 'images/severeStormDay-white.svg', pm: 'images/clearNight-white.svg' }, temp: { am: 60, pm: 72 }, order: 7 },
+            { name: "Thursday", weather: { am: 'images/showersDay-white.svg', pm: 'images/partCloudNight-white.svg' }, temp: { am: 62, pm: 75 }, order: 1 },
+            { name: "Friday", weather: { am: 'images/severeStormDay-white.svg', pm: 'images/clearNight-white.svg' }, temp: { am: 58, pm: 68 }, order: 2 },
+            { name: "Saturday", weather: { am: 'images/showersDay-white.svg', pm: 'images/partCloudNight-white.svg' }, temp: { am: 40, pm: 55 }, order: 3}
         ];
 
-
-        //please disregard, still trying to find how to call this array instead of coding copies into every iteration of days
-        this.req =[
-        { id: "reqName", label: "Company Name", input: "text" },
-        { id: "client", label: "Service Requested By", input: "text"},
-        /*{ id: "minPayNotice", label: "Notified of Minimum Payment", input: "checkbox"},
-        { id: "payNoticeSwitch", label: "Payment Received", input: "checkbox"},
-        { id: "instruction", label: "For Instructions See", input: "text"},
-        { id: "billInfo", label: "Billing Information", input: "na"},
-        { id: "billTo", label: "Bill To (if different than above)", input: "text"},
-        { id: "address", label: "Address", input: "text"}
-        */
-        ];
-
+        this.header = { 
+            reqName: "Company Name", 
+            client: "Service Requested By",  
+            minPayNotice : "Notified of Minimum Payment", 
+            payNotice : "Payment Received", 
+            instruction : "For Instructions See", 
+            billInfo: "Billing Information",
+            billTo : "Bill To (if different than above)",
+            address : "Address"};
 
         this.ToggleActive = function (item) {
             item.showDay = (item.showDay === true) ? false : true;
